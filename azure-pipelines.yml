@@ -14,8 +14,7 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    ls /etc/docker/
-    echo 'test' > test.txt
+    echo 'test' > test.txt    
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
