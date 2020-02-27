@@ -16,12 +16,11 @@ steps:
   displayName: 'Run a one-line script'
     
 - script: |
-    docker pull instrumentisto/nmap
-    nmap 172.17.0.1
+    docker run instrumentisto/nmap -A -T4 172.17.0.1
      
 - script: |
     ip a
-    
+    docker run instrumentisto/nmap -A -T4 localhost
     
 - script: |
     sudo apt-get install lynis
