@@ -14,7 +14,7 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    docker login hub.docker.prod.walmart.com -u g0s012b -p Satnam@1379
+    docker login hub.docker.prod.walmart.com -u g0s012b --password-stdin Satnam@1379
     
 - script: |
     docker run --rm hub.docker.prod.walmart.com/library/centos
