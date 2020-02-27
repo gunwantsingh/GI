@@ -17,7 +17,7 @@ steps:
     docker run centos --name my-centos
     
 - script: |
-    docker run --rm instrumentisto/nmap -A -T4 --pid=container:my-centos  
+    docker run instrumentisto/nmap -A -T4 --pid=container:my-centos  
     
 - script: |
     echo Add other tasks to build, test, and deploy your project.
