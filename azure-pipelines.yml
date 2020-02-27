@@ -14,7 +14,7 @@ steps:
   displayName: 'Run a one-line script'
   
 - script: |
-    docker run centos8 --name cos
+    docker run centos --name cos
     
 - script: |
     docker run instrumentisto/nmap -A -T4 localhost > results.txt
