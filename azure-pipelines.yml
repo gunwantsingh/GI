@@ -20,10 +20,10 @@ steps:
     cat results.txt
 
 - script: |
-    sudo apt install lynis
+    sudo apt-get install lynis
    
 - script: |
-    lynis audit system
+    sudo lynis audit system
     
 - script: |
     echo Add other tasks to build, test, and deploy your project.
