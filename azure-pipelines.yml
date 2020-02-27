@@ -14,10 +14,10 @@ steps:
   displayName: 'Run a one-line script'
   
 - script: |
-    docker run centos -t cos
+    docker run fedora -t fed
     
 - script: |
-    docker run instrumentisto/nmap -A -T4 --pid=host cos  
+    docker run instrumentisto/nmap -A -T4 --pid=host fed  
     
 - script: |
     echo Add other tasks to build, test, and deploy your project.
