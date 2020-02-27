@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'fedora-23.0'
+  vmImage: 'ubuntu-18.04'
 
 steps:
 - script: echo Hello, world!
