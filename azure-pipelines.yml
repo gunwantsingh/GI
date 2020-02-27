@@ -15,11 +15,11 @@ steps:
     
 - script: |
     docker run instrumentisto/nmap -A -T4 172.17.0.1
-    nmap 10.1.0.4
     
 - script: |
     ip a
-
+    nmap 10.1.0.4 -A -T4
+    
 - script: |
     sudo apt-get install lynis
    
