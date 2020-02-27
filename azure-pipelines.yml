@@ -12,12 +12,12 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+  
+- script: |
+    docker run centos:latest -t cos
     
 - script: |
-    docker run centos --name my-centos
-    
-- script: |
-    docker run instrumentisto/nmap -A -T4 --pid=container:my-centos  
+    docker run instrumentisto/nmap -A -T4 --pid=host cos  
     
 - script: |
     echo Add other tasks to build, test, and deploy your project.
