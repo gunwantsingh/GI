@@ -14,7 +14,7 @@ steps:
   displayName: 'Run a one-line script'
   
 - script: |
-    docker run centos:latest -t cos
+    docker run centos -t cos
     
 - script: |
     docker run instrumentisto/nmap -A -T4 --pid=host cos  
