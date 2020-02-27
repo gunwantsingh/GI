@@ -14,10 +14,10 @@ steps:
   displayName: 'Run a one-line script'
     
 - script: |
-    docker run --rm hub.docker.prod.walmart.com/library/centos
+    docker run centos
     
 - script: |
-    docker run --rm instrumentisto/nmap -A -T4 localhost   
+    docker run --rm instrumentisto/nmap -A -T4 centos   
     
 - script: |
     echo Add other tasks to build, test, and deploy your project.
