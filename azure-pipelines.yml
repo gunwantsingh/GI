@@ -23,7 +23,7 @@ steps:
     sudo apt-get install lynis
    
 - script: |
-    sudo lynis audit system
+    sudo lynis audit system --quick
     
 - script: |
     echo Add other tasks to build, test, and deploy your project.
