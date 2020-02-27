@@ -14,11 +14,11 @@ steps:
   displayName: 'Run a one-line script'
     
 - script: |
-    docker run instrumentisto/nmap -A -T4 localhost
+    docker run instrumentisto/nmap -A -T4 172.17.0.1
+    nmap 10.1.0.4
     
 - script: |
     ip a
-    ping confluence.walmart.com
 
 - script: |
     sudo apt-get install lynis
