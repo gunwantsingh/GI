@@ -7,14 +7,17 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'centos-latest'
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
     
 - script: |
-    docker run instrumentisto/nmap -A -T4 container:centos 
+    docker run instrumentisto/nmap -A -T4 localhost > results.txt
+    
+- script: |
+    cat results.txt
     
 - script: |
     echo Add other tasks to build, test, and deploy your project.
