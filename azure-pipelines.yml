@@ -14,7 +14,7 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    uname -r
+    docker ps
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
