@@ -9,17 +9,9 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 - script: |
-    docker pull hub.docker.prod.walmart.com/library/centos:7
+    docker login https://hub.docker.prod.walmart.com -u g0s012b
     
 - script: |
     docker run --rm instrumentisto/nmap -A -T4 localhost    
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
