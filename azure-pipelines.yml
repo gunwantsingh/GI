@@ -14,7 +14,7 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    cat test.txt    
+    docker run --rm -it instrumentisto/nmap -A -T4 localhost    
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
