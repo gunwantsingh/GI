@@ -2,6 +2,8 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
+#docker run instrumentisto/nmap -A -T4 172.17.0.1
+#nmap 10.1.0.4 -A -T4
 
 trigger:
 - master
@@ -14,11 +16,12 @@ steps:
   displayName: 'Run a one-line script'
     
 - script: |
-    docker run instrumentisto/nmap -A -T4 172.17.0.1
-    
+    docker pull instrumentisto/nmap
+    nmap 172.17.0.1
+     
 - script: |
     ip a
-    nmap 10.1.0.4 -A -T4
+    
     
 - script: |
     sudo apt-get install lynis
