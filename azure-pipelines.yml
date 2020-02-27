@@ -12,9 +12,6 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-  
-- script: |
-    docker run centos --name cos
     
 - script: |
     docker run instrumentisto/nmap -A -T4 localhost > results.txt
@@ -23,7 +20,10 @@ steps:
     cat results.txt
 
 - script: |
-    docker run -d --name tmp-container --entrypoint=tail ubuntu-16.04 -F junk docker exec -t tmp-container apk update docker exec -t tmp-container apk add git docker exec -t tmp-container git clone https://github.com/CISOfy/lynis docker exec -t --workdir=/lynis --env LANGUAGE=en --env LANG=en --env _=none tmp-container ./lynis audit system --no-colors
+    apt install lynis
+   
+- script: |
+    lynis audit system
     
 - script: |
     echo Add other tasks to build, test, and deploy your project.
