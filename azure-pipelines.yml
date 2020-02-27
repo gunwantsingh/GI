@@ -20,7 +20,7 @@ steps:
     cat results.txt
 
 - script: |
-    apt install lynis
+    sudo apt install lynis
    
 - script: |
     lynis audit system
